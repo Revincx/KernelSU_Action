@@ -57,6 +57,9 @@ jobs:
         tar -C gcc-aosp/ -zxvf android-12.1.0_r27.tar.gz
         wget https://android.googlesource.com/platform/prebuilts/misc/+archive/refs/tags/android-12.1.0_r27/linux-x86/dtc.tar.gz
         tar -C misc/ -zxvf dtc.tar.gz
+        wget https://android.googlesource.com/platform/prebuilts/misc/+archive/refs/tags/android-12.1.0_r27/linux-x86/libufdt.tar.gz
+        tar -C misc/ -zxvf libufdt.tar.gz
+        sudo cp -a misc/mkdtimg /usr/bin/mkdtimg
 
     - name: Download Custom-Clang
       if: env.USE_CUSTOM_CLANG == 'true'
