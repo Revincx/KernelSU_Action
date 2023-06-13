@@ -55,7 +55,7 @@ jobs:
       if: env.USE_CUSTOM_CLANG == 'false'
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        mkdir misc
+        mkdir misc clang-aosp
         wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/${{ env.CLANG_BRANCH }}/clang-${{ env.CLANG_VERSION }}.tar.gz
         tar -C clang-aosp/ -zxvf clang-${{ env.CLANG_VERSION }}.tar.gz
         wget https://android.googlesource.com/platform/prebuilts/misc/+archive/refs/tags/android-12.1.0_r27/linux-x86/dtc.tar.gz
